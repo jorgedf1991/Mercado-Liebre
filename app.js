@@ -20,8 +20,8 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/login.html'));
 });
 
+const port = process.env.PORT || 3000;
 
-
-app.listen(3000, () => {
-    console.log("Levantando un servidor con Express en ", "http://localhost:3000");
+app.listen(port, () => {
+    console.log('Levantando un servidor con Express en  http://localhost:'+port);
 });
