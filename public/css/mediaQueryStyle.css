@@ -1,16 +1,5 @@
 /* Tablet */
 @media (min-width: 768px) {
-    #main-home {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 50%;
-    }
-
-    #formulario-login {
-        padding: 40px;
-    }
-
     .logo-container {
         flex-direction: row;
     }
@@ -22,7 +11,7 @@
     .card-container {
         display: flex;
         width: 50%;
-        padding: 0px;
+        padding: 0;
         justify-content: center;
         align-items: center;
     }
@@ -43,96 +32,89 @@
 
     ul {
         display: flex;
-        width: 35%;
+        width: 45%;
         justify-content: space-between;
     }
 
-    .contenedor-article {
-        flex-basis: 48%;
+    /*PRODUCTOS*/
+    .last-visit, .ofert{
+        height: 860px;
     }
 
-    .descripcion {
+    .product{
         display: flex;
-    }
-
-    .contenedor-article {
-        display: flex;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 48%;
-    }
-
-    .login-usuario label input {
-        margin: auto;
-        margin-bottom: 15px;
-        font-size: 24px;
-    }
-
-    .login-usuario label input:hover {
-        background-color: white;
-        color: blue;
-        cursor: pointer;
-    }
-
-    #Formulario {
-        border: 4px solid rgb(87, 84, 84);
-        width: 400px;
-        margin: 30px;
-        display: flex;
-        flex-direction: column-reverse;
-        align-content: center;
         flex-wrap: wrap;
-        border-radius: 6px;
+        justify-content: space-between;
     }
 
-    .boton {
-        display: flex;
-        justify-content: space-evenly;
+    .product article{
+        width: 49%;
+    }
+
+    article{
+        height: 26em;
+        transition: all 0.4s ease-in;
+    }
+
+    .main-article h4{
+        position: relative;
+        bottom: 40px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.4s ease-in;
+    }
+
+    article:hover{
+        box-shadow: 0px 0px 10px rbg(100, 100, 100);
+        height: 27em;
+    }
+
+    article:hover .main-article h4{
+        position: relative;
+        bottom: 0;
+        z-index: 1;
+        opacity: 1;
     }
 }
 
 /* Desktop */
+@media (min-width: 1024px) {
+    .last-visit, .ofert{
+        height: 295px;
+    }
+    .product article{
+        width: 24%;
+    }
+
+    .price, .discount{
+        font-size: 14px;
+    }
+
+    article{
+        height: 18em;
+    }
+
+    article:hover{
+        height: 19em;
+        box-shadow: 0px 0px 10px rbg(100, 100, 100);
+    }
+}
+
+/* TV hasta 1366 */
 @media (min-width: 1200px) {
-    header {
-        height: 180px;
+    .last-visit, .ofert{
+        height: 380px;
     }
 
-.precios, .descripcion{
-font-size: 24px;
-}
-.descuento{
-    font-size: 20px;
-}
-    li,
-    li a {
-        display: flex;
-        font-size: 20px;
-        margin: 0 10px;
-        justify-content: space-between;
-        text-align: center;
+    article{
+        height: 22.5em;
     }
 
-    .fa-solid, .fas {
-        font-size: 20px;
+    article:hover{
+        height: 24em;
+        box-shadow: 0px 0px 10px rbg(100, 100, 100);
     }
-   
-    #banner img {
-        height: 220px;
-        width: 100%;
-    }
-
-    img {
-        width: 400px;
-    }
-/* LOGIN */
-
-    section {
-        display: flex;
-    }
-
-    .productos {
-        flex-basis: 50%;
-    }
-
+    /*formulario - login*/
     #Formulario{
         height: 640px;
         width: 37%;
@@ -204,9 +186,6 @@ font-size: 24px;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 48%;
     }
-    div.lista-interes{
-        font-size: 15px;
-    }
 
     .login-usuario label input {
         border-radius: 15px;
@@ -214,13 +193,13 @@ font-size: 24px;
         font-size: 17px;
         padding: 11px;
         margin: 8px;
-        width: 40%;
+        width: 50%;
     }
 
     .login-usuario button {
-        width: 40%;
+        width: 50%;
         font-size: 20px;
-        transition: .3s;
+        transition: .2s;
     }
 
 
@@ -229,16 +208,7 @@ font-size: 24px;
         color: white;
         cursor: pointer;
     }
-    .contenedor-article i {
-        font-size: 24px;
-        padding: 15px;
-        width: 50px;
-        height: 50px;
-        border: 1px solid #39b54a;
-        
-      }
 
-/* FOOTER */
     a {
         font-size: 20px;
     }
@@ -252,9 +222,6 @@ font-size: 24px;
     .pie-de-pagina i {
         display: flex;
         justify-content: center;
-    }
-    .pie-de-pagina h4, p{
-        font-size: 20px;
     }
 
     footer {
@@ -280,3 +247,152 @@ font-size: 24px;
         padding: 15px;
     }
 }
+
+
+@media (min-width: 1370px) {
+    .last-visit, .ofert{
+        height: 400px;
+    }
+
+    article{
+        height: 23.5em;
+    }
+
+    article:hover{
+        height: 24.5em;
+        box-shadow: 0px 0px 10px rbg(100, 100, 100);
+    }
+    /*Formulario - login*/
+    #Formulario{
+        height: 764px;
+        width: 37%;
+    }
+    #formulario-login {
+        padding: 40px;
+        width: 100%;
+        font-size: 20px;
+    }
+    #Formulario input {
+        border: none;
+        border-radius: 5px;
+        font-size: 17px;
+    }
+    form h4{
+        font-size: 17px;
+    }
+    div.buton{
+        margin-bottom: 25px;
+
+    }
+
+    .logo-container {
+        flex-direction: row;
+    }
+
+    .logo-bar-container {
+        width: 50%;
+    }
+
+    .card-container {
+        display: flex;
+        width: 50%;
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-container h2 {
+        font-size: 30px;
+    }
+
+    .card-title i {
+        font-size: 30px;
+    }
+
+    .burger-container {
+        display: none;
+    }
+
+    .menu-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    ul {
+        display: flex;
+        width: 35%;
+        justify-content: space-between;
+    }
+
+    .descripcion {
+        display: flex;
+    }
+
+    .contenedor-article {
+        display: flex;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 48%;
+    }
+
+    .login-usuario label input {
+        border-radius: 15px;
+        color: rgb(11, 9, 9);
+        font-size: 17px;
+        padding: 11px;
+        margin: 8px;
+        width: 50%;
+    }
+
+    .login-usuario button {
+        width: 50%;
+        font-size: 20px;
+        transition: .2s;
+    }
+
+
+    .login-usuario button:hover {
+        background-color: rgb(93, 85, 238);
+        color: white;
+        cursor: pointer;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    .pie-de-pagina {
+        padding: 45px;
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    .pie-de-pagina i {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        display: block;
+    }
+
+    #footer {
+        display: flex;
+        justify-content: space-between;
+        height: 300px;
+        width: 100%;
+        margin: 15px;
+    }
+
+    footer h4 {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .Copyright {
+        padding: 15px;
+    }
+}
+

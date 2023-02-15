@@ -1,70 +1,73 @@
-*{
+* {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-size: 12px;
 }
 
-body{
-    background: var(--grisClaro)
+body {
+    background: var(--grisClaro);
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--negro);
 }
 
-ul{
+ul {
     list-style: none;
+    padding: 0;
 }
 
-img{
+img {
     width: 100%;
-} 
-
-html{
-    font-family: "roboto", sans-serif;
 }
-/* *** HEADER *** */
-header{
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*  **** HEADER **** */
+
+header {
     /* border: 3px solid green; */
     background-color: var(--amarillo);
     display: flex;
     flex-direction: column;
 }
 
-.logo-container{
+.logo-container {
     /* border: 3px solid red; */
     display: flex;
     flex-direction: column;
 }
 
-.menu-container{
-    border: 6px solid var(--amarillo); 
+.menu-container {
+    /* border: 3px solid red; */
     display: none;
 }
 
-.burger-container{
+.burger-container {
     /* border: 3px solid red; */
     display: flex;
     justify-content: center;
 }
 
-.logo-bar-container{
+.logo-bar-container {
     /* border: 3px solid gray; */
     display: flex;
 }
-.card-container{
+
+.card-container {
     /* border: 3px solid gray; */
     padding: 15px;
 }
 
-.logo{
+.logo {
     /* border: 3px solid pink; */
     width: 50%;
     padding: 10px;
 }
 
-.search-button-container{
+.search-buttton-container {
     /* border: 3px solid pink; */
     display: flex;
     width: 50%;
@@ -72,38 +75,39 @@ header{
     align-items: center;
 }
 
-.search-container{
-    /* border: 3px solid blue; */
+.search-container {
+    /* border: 3px solid brown; */
     display: flex;
     height: 25px;
     width: 90%;
 }
 
-.card-title{
+.card-title {
     font-weight: 400;
     text-align: center;
+    font-family: 'Roboto';
 }
 
-.card-title i{
+.card-title i {
     margin-right: 10px;
 }
 
-.search-button-container input{
+input {
     width: 95%;
     border: none;
     background-color: var(--blanco);
     border-radius: 5px 0 0 5px;
 }
 
-button{
+button {
     width: 15%;
     padding: 1px;
     border: none;
     background-color: var(--blanco);
-    border-radius: 0 5px 5px 0 ;
+    border-radius: 0 5px 5px 0;
 }
 
-.burger-menu{
+.burger-menu {
     border: 1px solid black;
     width: 40px;
     height: 40px;
@@ -115,80 +119,88 @@ button{
     color: var(--blanco);
     background-color: var(--azul);
 }
-/* **FIN DEL HEADER** */
 
-/*  **MAIN**  */
-#main-home{
-    width: 90%;
+
+
+/**  FIN HEADER * */
+
+/* PRODUCTOS */
+main h3{
+margin-top: 10px;
+margin-bottom: 10px;
+text-align: center;
 }
 
-.titulo-articulos{
-    border: 3px solid red;
-}
-
-h2{
-    font-size: 24px;
+.last-visit, .ofert{
     display: flex;
-    justify-content: left;
+    flex-direction: column;
+    align-items: center;
 }
-.sub-contenedor-info{
+
+.last-visit .product{
+width: 95%;
+}
+
+.product article{
+    background: var(--blanco);
+    padding: 10px 0;
+}
+
+.product article i{
+    color: var(--verde);
+    border: 1px solid var(--verde);
+    background-color: var(--blanco);
+    border-radius: 50%;
+    padding: 8px;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+}
+
+.main-article{
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 10px;
+    border-top: 1px solid var(--grisClaro);
 }
-.sub-contenedor-info .precios{
+
+.price{
+    font-size: 18px;
     width: 30%;
 }
-.sub-contenedor-info .descuento{
+
+.discount{ 
     width: 70%;
     color: var(--verde);
 }
-.contenedor-article{
-    display: flex;
-    flex-direction: column;
-    border: 3px solid blue;
-    margin: 10px;
-}
-.contenedor-info{
-    border-top: 1px solid #ebebeb;
-    background-color: white;
-    position: relative;
-}
 
-
-.contenedor-article i {
-    color: #39b54a;
-    display: block;
+.discount, .description{
     font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-    transition: all .3s ease-in-out;
-  }
-  .contenedor-article i:hover{
+    font-weight: normal;
+}
+h3, .description{
+    color: var(--grisOscuro);
+}
+
+article{
+    margin-bottom: 15px;
+}
+
+.ofert .product{
+    width: 95%;
+}
+
+main section div.product article i{
+    transition: transform 1s;
+}
+
+main section div.product article i:hover{
     transform: rotate(-90deg);
-  }
-
-.precios{
-    font-size: 18px;
-    margin-left: 15px;
 }
 
-.descuento{
-    font-size: 16px;
-    margin-left: 15px;
-}
-
-.descripcion{
-   font-size: 16px;
-   margin-left: 15px;
-   display: none;
-}
 
 /*  LOGIN */
 
@@ -219,7 +231,7 @@ h2{
     border: 2px solid blue;
     background-color: blue;
     border-radius: 10px;
-    color: white;
+    color: rgb(231, 222, 222);
     font-size: 15px;
     padding: 8px;
     margin: 5px;
