@@ -248,6 +248,10 @@ main section div.product article i:hover{
     padding: 5px;
 }
 
+.info-usuario:hover{
+    text-decoration: underline;
+}
+
 /*REGISTRO*/
 #Cuerpo-Formulario{
     display: flex;
@@ -288,6 +292,10 @@ footer{
     margin: 5px;
     background-color: var(--blanco);
     color: var(--azul);
+}
+
+.pie-de-pagina i:hover{
+    color: rgb(42, 193, 244);
 }
 .pie-de-pagina h4{
     font-size: 15px;
